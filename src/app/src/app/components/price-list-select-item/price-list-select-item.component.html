@@ -1,0 +1,11 @@
+<form>
+    <h4>Select Item</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Select Item</mat-label>
+      <mat-select [(ngModel)]="selectedValue" (ngModelChange)="setItem()" name="foodItem">
+        <mat-option *ngFor="let item of items" [value]="item.value">
+          {{item.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+</form>

@@ -1,0 +1,17 @@
+<mat-card class="example-card">
+    <mat-card-content>
+    <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>penguin ears</mat-label>
+      <input matInput placeholder="penguin ears" name="penguinEars" type="number" min="0" [(ngModel)]="penguinEars" >
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+        <mat-label>horse shoes</mat-label>
+        <input matInput placeholder="horse shoes" name="horseShoes" type="number" min="0"  [(ngModel)]="horseShoes">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="calculatePrice()">Calculate Price</button>
+  </form>
+</mat-card-content>
+</mat-card>
+
