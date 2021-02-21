@@ -1,17 +1,41 @@
-<mat-card class="example-card">
+<mat-card class="example-card  mat-elevation-z6">
     <mat-card-content>
-    <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>penguin ears</mat-label>
-      <input matInput placeholder="penguin ears" name="penguinEars" type="number" min="0" [(ngModel)]="penguinEars" >
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-        <mat-label>horse shoes</mat-label>
-        <input matInput placeholder="horse shoes" name="horseShoes" type="number" min="0"  [(ngModel)]="horseShoes">
+      <form class="example-form">
+        <table>
+          <tr>
+            <mat-card-subtitle>penguin ears</mat-card-subtitle>
+            <td>
+      <mat-form-field class="example-full-width">
+        <mat-label>units</mat-label>
+        <input matInput placeholder="units" name="penguinEarUnits" type="number" min="0" max=20 [(ngModel)]="penguinEarUnits" >
       </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>cartons</mat-label>
+                <input matInput placeholder="cartons" name="penguinEarCartons" type="number" min="0" [(ngModel)]="penguinEarCartons" >
+              </mat-form-field>
+            </td>
+          </tr>
+        <tr>
+          <mat-card-subtitle>horse shoes</mat-card-subtitle>
+          <td>
+      <mat-form-field class="example-full-width">
+          <mat-label>horse shoes</mat-label>
+          <input matInput placeholder="horse shoes" name="horseShoeUnits" type="number" min="0"  [(ngModel)]="horseShoeUnits">
+        </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>horse shoes</mat-label>
+              <input matInput placeholder="horse shoes" name="horseShoeCartons" type="number" min="0"  [(ngModel)]="horseShoeCartons">
+            </mat-form-field>
+          </td>
+      </tr> 
       <button mat-raised-button color="primary" (click)="calculatePrice()">Calculate Price</button>
-  </form>
-</mat-card-content>
+
+      </table>
+      </form>
+  </mat-card-content>
 </mat-card>
 

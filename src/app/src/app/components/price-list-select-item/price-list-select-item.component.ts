@@ -1,4 +1,5 @@
-import { Component, OnInit ,Output, EventEmitter} from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
+import { ItemName } from '../../constants/item-names';
 
 interface Item {
   value: string;
@@ -10,25 +11,19 @@ interface Item {
   templateUrl: './price-list-select-item.component.html',
   styleUrls: ['./price-list-select-item.component.scss']
 })
-export class PriceListSelectItemComponent implements OnInit {
+export class PriceListSelectItemComponent{
 
   selectedValue: string;
  
   items: Item[] = [
-    {value: 'penguinEar', viewValue: 'PenguinEar'},
-    {value: 'horseShoe', viewValue: 'HorseShoe'}
+    {value: ItemName.PENGUIN_EAR, viewValue: 'PenguinEar'},
+    {value: ItemName.HORSE_SHOE, viewValue: 'HorseShoe'}
   ];
 
   @Output() setItemEvent = new EventEmitter<string>();
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
   setItem(){
     this.setItemEvent.emit(this.selectedValue);
-    console.log(this.selectedValue);
   }
 
 }

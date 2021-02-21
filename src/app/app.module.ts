@@ -11,6 +11,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import { ToastrModule } from 'ngx-toastr';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -50,7 +52,9 @@ import { PriceCalculatorPurchaseAmountComponent } from './src/app/components/pri
     MatTableModule,
     MatPaginatorModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatButtonToggleModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

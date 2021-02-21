@@ -5,8 +5,10 @@ import { PriceListComponent } from './src/app/components/price-list/price-list.c
 
 
 const routes: Routes = [
+  
   {path: 'price-list', component: PriceListComponent},
   {path: 'price-calculator', component: PriceCalculatorComponent},
+  {path: '**', component: PriceListComponent}
 ];
 
 @NgModule({

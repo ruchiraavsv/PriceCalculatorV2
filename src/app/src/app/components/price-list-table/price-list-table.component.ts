@@ -1,5 +1,5 @@
 import { SimpleChanges } from '@angular/core';
-import { Component, OnInit,AfterViewInit, ViewChild, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, OnChanges } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { Item } from '../../models/Item';
@@ -14,17 +14,6 @@ export class PriceListTableComponent implements OnInit, OnChanges {
 
   @Input() itemList:Item[];
   dataSource: MatTableDataSource<Item>;
-
-  // ELEMENT_DATA: Item[] = [
-  //   { name: 'Hydrogen', units: 1.0079, price: 2},
-  //   { name: 'Helium', units: 4.0026, price: 4},
-  //   { name: 'Hydrogen', units: 1.0079, price: 2},
-  //   { name: 'Helium', units: 4.0026, price: 4},
-  //   { name: 'Hydrogen', units: 1.0079, price: 2},
-  //   { name: 'Helium', units: 4.0026, price: 4},
-  
-  // ];
-
   displayedColumns: string[] = ['name', 'units', 'price'];
   
 
